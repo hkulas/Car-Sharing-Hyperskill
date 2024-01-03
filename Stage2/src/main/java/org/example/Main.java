@@ -15,7 +15,6 @@ public class Main {
     private static CompanyDAO companyDAO;
 
     public static void main(String[] args) {
-        // Establish database connection
         String url = "jdbc:h2:./src/carsharing/db/carsharing";
         try (Connection connection = DriverManager.getConnection(url)) {
             connection.setAutoCommit(true);

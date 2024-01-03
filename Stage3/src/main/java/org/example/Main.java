@@ -19,14 +19,12 @@ public class Main {
     private static CarDAO carDAO;
 
     public static void main(String[] args) {
-        // Database URL (adjust as necessary)
         String url = "jdbc:h2:./src/carsharing/db/carsharing";
 
         try (Connection connection = DriverManager.getConnection(url)) {
             connection.setAutoCommit(true);
             createTablesIfNeeded(connection);
 
-            // Initialize DAOs
             companyDAO = new CompanyDAOImpl(connection);
             carDAO = new CarDAOImpl(connection);
 

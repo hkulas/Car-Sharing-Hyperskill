@@ -13,7 +13,6 @@ public class Car {
         this.companyId = companyId;
     }
 
-    // Getters and setters
     public int getId() {
         return id;
     }
