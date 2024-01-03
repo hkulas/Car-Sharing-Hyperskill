@@ -21,9 +21,9 @@ public class Main {
             connection.setAutoCommit(true);
 
             try (Statement statement = connection.createStatement()) {
-                String sql = "CREATE TABLE IF NOT EXISTS COMPANY (" +
-                        "ID INT PRIMARY KEY," +
-                        "NAME VARCHAR(100));";
+                String sql = "ALTER TABLE COMPANY \n" +
+                        "    ALTER COLUMN ID INT AUTO_INCREMENT,\n" +
+                        "    ADD CONSTRAINT UNIQUE_NAME UNIQUE (NAME);";
 
                 statement.execute(sql);
 
