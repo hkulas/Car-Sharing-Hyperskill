@@ -12,6 +12,7 @@
         <module>Stage1</module>
         <module>Stage2</module>
         <module>Stage3</module>
+        <module>Stage4</module>
     </modules>
 
     <properties>
